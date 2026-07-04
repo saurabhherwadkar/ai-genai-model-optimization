@@ -1,0 +1,47 @@
+app:
+  name: "ai-genai-model-optimization"
+  version: "1.0.0"
+
+quantization:
+  default_method: "gptq"
+  gptq:
+    bits: 4
+    group_size: 128
+    desc_act: true
+    dataset: "c4"
+    num_samples: 128
+  awq:
+    bits: 4
+    group_size: 128
+    zero_point: true
+  gguf:
+    quantization_type: "q4_k_m"
+
+distillation:
+  teacher_model: "meta-llama/Llama-3.1-70B-Instruct"
+  student_model: "meta-llama/Llama-3.1-8B-Instruct"
+  temperature: 2.0
+  alpha: 0.5
+  num_epochs: 3
+  batch_size: 4
+
+serving:
+  engine: "vllm"
+  max_model_len: 4096
+  gpu_memory_utilization: 0.9
+  tensor_parallel_size: 1
+
+benchmarks:
+  metrics: ["latency_ms", "throughput_tps", "memory_mb", "quality_score"]
+  num_samples: 50
+  warmup_iterations: 5
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/app.log"

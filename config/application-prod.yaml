@@ -1,0 +1,17 @@
+app:
+  name: "ai-genai-model-optimization"
+quantization:
+  gptq:
+    num_samples: 256
+benchmarks:
+  num_samples: 100
+serving:
+  gpu_memory_utilization: 0.95
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false
+logging:
+  level: "INFO"
+  format: "json"
+  file: "logs/app-prod.log"

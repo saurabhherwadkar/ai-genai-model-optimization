@@ -1,0 +1,15 @@
+app:
+  name: "ai-genai-model-optimization"
+quantization:
+  gptq:
+    num_samples: 32
+benchmarks:
+  num_samples: 10
+api:
+  host: "127.0.0.1"
+  port: 8000
+  reload: true
+logging:
+  level: "DEBUG"
+  format: "text"
+  file: "logs/app-dev.log"
