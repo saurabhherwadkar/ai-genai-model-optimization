@@ -2,6 +2,19 @@
 
 LLM optimization framework with GPTQ/AWQ/GGUF quantization, knowledge distillation, speculative decoding, and production serving with vLLM.
 
+## Key Learning Objectives
+
+- Understand post-training quantization techniques (GPTQ, AWQ) and how they reduce model size while preserving quality
+- Apply activation-aware weight quantization (AWQ) to achieve optimal compression with minimal accuracy loss
+- Convert transformer models to GGUF format for efficient CPU and hybrid CPU/GPU inference using llama.cpp
+- Implement knowledge distillation pipelines to transfer capabilities from large teacher models to smaller student models
+- Benchmark and compare inference latency, throughput, memory footprint, and output quality across optimization methods
+- Deploy quantized LLMs in production using vLLM with continuous batching and PagedAttention for high-throughput serving
+- Design cost-optimization strategies by selecting the right quantization method based on hardware constraints and quality requirements
+- Build REST APIs around optimized models with FastAPI, supporting multiple quantization backends behind a unified interface
+- Evaluate trade-offs between model compression ratio, inference speed, and generation quality for real-world deployment decisions
+- Containerize and orchestrate optimized model serving with Docker for reproducible, scalable production environments
+
 ## Table of Contents
 1. [Overview](#overview)
 2. [Project Structure](#project-structure)
