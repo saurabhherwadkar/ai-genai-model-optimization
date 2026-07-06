@@ -2,7 +2,7 @@
 
 LLM optimization framework with GPTQ/AWQ/GGUF quantization, knowledge distillation, speculative decoding, and production serving with vLLM.
 
-## Key Learning Objectives
+## Objectives
 
 - Understand post-training quantization techniques (GPTQ, AWQ) and how they reduce model size while preserving quality
 - Apply activation-aware weight quantization (AWQ) to achieve optimal compression with minimal accuracy loss
